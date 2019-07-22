@@ -31,7 +31,7 @@ public class Zadanie {
             element.clear();
             element.sendKeys("Mistrzostwa Świata w piłce nożnej 2018");
             element.submit();
-driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
             WebElement wyniki = driver.findElement(By.xpath("/html/body/div[2]/main/div/span[1]"));//b(y.classname ("sb_count"))
                     String wynik = wyniki.getText();
             Assert.assertEquals("1 920 000 Results", wynik);
